@@ -1,7 +1,6 @@
 # Mental-Health-monitoring-via-EHR-and-Social-Media-data
 
 **Technologies:** AWS (EC2, S3, Lambda, RDS), Python, React, NLP  
-**Duration:** January 2025 – May 2025
 
 ---
 
