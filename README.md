@@ -4,7 +4,7 @@ A full-stack, cloud-integrated project for analyzing and visualizing mental heal
 
 ---
 
-## 📚 Features
+## Features
 
 - 🧠 Sentiment analysis on social media text using TextBlob or ML models
 - 📊 ML model integration (XGBoost) trained on EHR-style statements
