@@ -97,4 +97,4 @@ zip -r sentiment_lambda.zip .
 - 💻 Frontend: React + Tailwind CSS + shadcn/ui
 
 ---
-Harsh Verma
+Made by Harsh Verma
