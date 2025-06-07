@@ -32,7 +32,7 @@ Mental-Health-monitoring-via-EHR-and-Social-Media-data/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### ▶️ Streamlit Interface (ML Prototype)
 
