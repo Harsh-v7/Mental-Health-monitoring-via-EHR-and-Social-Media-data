@@ -1,49 +1,100 @@
-# Mental-Health-monitoring-via-EHR-and-Social-Media-data
+# 🧠 Mental Health Monitoring via EHR and Social Media Data
 
-**Technologies:** AWS (EC2, S3, Lambda, RDS), Python, React, NLP  
-
----
-
-## Project Overview
-
-This project is a full-stack mental health monitoring platform that integrates patient Electronic Health Records (EHR) with real-time sentiment analysis of Twitter data to detect early signs of anxiety and depression. The system leverages cloud infrastructure and advanced NLP techniques to provide actionable insights for healthcare providers.
+A full-stack, cloud-integrated project for analyzing and visualizing mental health patterns using EHR datasets and social media inputs. Includes Streamlit-based ML prototype, AWS Lambda-based sentiment service, and a Tailwind-powered React frontend.
 
 ---
 
-## Features
+## 📚 Features
 
-- **Integrated Data Sources:** Combines structured patient health records with unstructured social media sentiment for a comprehensive mental health overview.
-- **Real-time Twitter Sentiment Analysis:** Utilizes NLP to analyze live Twitter streams, detecting emotional trends related to anxiety and depression.
-- **Cloud-Hosted Solution:** Deployed on AWS using EC2 for compute, S3 for secure storage, Lambda for serverless processing, and RDS for relational database management.
-- **Security & Compliance:** Implements secure IAM access controls and encrypted storage to adhere to HIPAA compliance standards.
-- **Performance Optimizations:** Enhanced system responsiveness by optimizing SQL queries and implementing AWS auto-scaling features.
-- **Data Visualization:** Interactive Python dashboards provide clear visual insights extracted from combined data sources.
-
----
-
-## Architecture
-
-1. **Frontend:** React application for user interaction and visualization.
-2. **Backend:** Python-based APIs for data processing and integration.
-3. **Data Storage:** AWS RDS stores patient EHR data securely.
-4. **Data Processing:** AWS Lambda functions handle Twitter data ingestion and sentiment analysis.
-5. **Storage:** AWS S3 stores logs, processed data, and backups.
-6. **Security:** AWS IAM roles and policies ensure secure access control.
+- 🧠 Sentiment analysis on social media text using TextBlob or ML models
+- 📊 ML model integration (XGBoost) trained on EHR-style statements
+- ⚙️ Streamlit UI with joblib models for demo/testing
+- ☁️ AWS Lambda + API Gateway for real-time inference
+- 💻 React + Tailwind frontend with dark/light theme and dynamic feedback
 
 ---
 
-## Getting Started
+## 📁 Project Structure
 
-### Prerequisites
+```
+Mental-Health-monitoring-via-EHR-and-Social-Media-data/
+├── frontend/                  # React + Tailwind app
+│   ├── pages/
+│   └── components/ui/
+├── sentiment_lambda/         # Lambda function code (sentiment_analysis.py)
+├── app.py                    # Flask backend (optional)
+├── streamlit_app/            # Streamlit ML prototype
+│   ├── streamlit.ipynb
+│   ├── xgb_model.pkl
+│   └── vectorizer.pkl
+├── README.md
+```
 
-- AWS account with necessary permissions (EC2, S3, Lambda, RDS, IAM)
-- Python 3.x
-- Node.js and npm
-- Twitter API access credentials
+---
 
-### Installation
+## 🚀 Getting Started
 
-1. Clone the repo:  
-   ```bash
-   git clone https://github.com/yourusername/mental-health-monitoring-system.git
-   cd mental-health-monitoring-system
+### ▶️ Streamlit Interface (ML Prototype)
+
+1. Install dependencies:
+```bash
+pip install streamlit scikit-learn pandas numpy xgboost
+```
+2. Run Streamlit:
+```bash
+streamlit run streamlit_app/streamlit.ipynb
+```
+
+Or convert to .py and run:
+```bash
+streamlit run streamlit_app/app.py
+```
+
+---
+
+### 🌐 React + Tailwind Frontend
+
+1. Navigate to frontend folder:
+```bash
+cd frontend
+```
+2. Install dependencies:
+```bash
+npm install
+```
+3. Run the app:
+```bash
+npm run dev
+```
+4. Update SentimentChecker.jsx:
+Replace:
+```js
+const response = await fetch("<your-api-url>")
+```
+With your deployed AWS Lambda API Gateway URL.
+
+---
+
+### ⚙️ AWS Lambda + API Gateway (Backend)
+
+1. Prepare Lambda function (sentiment_analysis.py)
+2. Package with dependencies:
+```bash
+pip install textblob -t .
+zip -r sentiment_lambda.zip .
+```
+3. Deploy to AWS Lambda
+4. Set up API Gateway with POST route
+5. Test via Postman or frontend fetch()
+
+---
+
+## 📦 Tech Stack
+
+- 💡 Machine Learning: XGBoost, Scikit-learn
+- 📊 Visualization: Streamlit
+- ⚙️ API: AWS Lambda, Flask (optional)
+- 💻 Frontend: React + Tailwind CSS + shadcn/ui
+
+---
+Harsh Verma
